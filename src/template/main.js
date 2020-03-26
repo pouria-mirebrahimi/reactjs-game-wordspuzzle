@@ -231,7 +231,17 @@ class Main extends Component {
             " => Match"
         );
 
-        this.play_correct();
+        this.play_correct({
+          onplay: function() {
+            console.log("Yay, playing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
 
         for (var i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
@@ -242,13 +252,33 @@ class Main extends Component {
         if (this.finished_words >= this.total_words) {
           this.openModalHandler();
 
-          this.play_win();
+          this.play_win({
+            onplay: function() {
+              console.log("Yay, playing");
+            },
+            onerror: function(errorCode, description) {
+              // maybe failure happened _during_ playback, maybe it failed to start.
+              // depends on what is passed to the function.
+              // errorCode is currently based on W3 specs for HTML5 playback failures.
+              // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+            }
+          });
         }
         this.selected_buttons = [];
       } else {
         console.log("Do not match");
 
-        this.play_wrong();
+        this.play_wrong({
+          onplay: function() {
+            console.log("Yay, playing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
 
         for (var i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
@@ -306,7 +336,17 @@ class Main extends Component {
             " => Match"
         );
 
-        this.play_correct();
+        this.play_correct({
+          onplay: function() {
+            console.log("Yay, playing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
 
         for (var i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
@@ -317,13 +357,33 @@ class Main extends Component {
         if (this.finished_words >= this.total_words) {
           this.openModalHandler();
 
-          this.play_win();
+          this.play_win({
+            onplay: function() {
+              console.log("Yay, playing");
+            },
+            onerror: function(errorCode, description) {
+              // maybe failure happened _during_ playback, maybe it failed to start.
+              // depends on what is passed to the function.
+              // errorCode is currently based on W3 specs for HTML5 playback failures.
+              // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+            }
+          });
         }
         this.selected_buttons = [];
       } else {
         console.log("Do not match");
 
-        this.play_wrong();
+        this.play_wrong({
+          onplay: function() {
+            console.log("Yay, playing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
 
         for (var i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
@@ -381,7 +441,17 @@ class Main extends Component {
             " => Match"
         );
 
-        this.play_correct();
+        this.play_correct({
+          onplay: function() {
+            console.log("Yay, playing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
 
         for (var i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
@@ -392,13 +462,33 @@ class Main extends Component {
         if (this.finished_words >= this.total_words) {
           this.openModalHandler();
 
-          this.play_win();
+          this.play_win({
+            onplay: function() {
+              console.log("Yay, playing");
+            },
+            onerror: function(errorCode, description) {
+              // maybe failure happened _during_ playback, maybe it failed to start.
+              // depends on what is passed to the function.
+              // errorCode is currently based on W3 specs for HTML5 playback failures.
+              // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+            }
+          });
         }
         this.selected_buttons = [];
       } else {
         console.log("Do not match");
 
-        this.play_wrong();
+        this.play_wrong({
+          onplay: function() {
+            console.log("Yay, playing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
 
         for (var i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
@@ -456,7 +546,17 @@ class Main extends Component {
             " => Match"
         );
 
-        this.play_correct();
+        this.play_correct({
+          onplay: function() {
+            console.log("Yay, playing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
 
         for (var i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
@@ -467,13 +567,33 @@ class Main extends Component {
         if (this.finished_words >= this.total_words) {
           this.openModalHandler();
 
-          this.play_win();
+          this.play_win({
+            onplay: function() {
+              console.log("Yay, playing");
+            },
+            onerror: function(errorCode, description) {
+              // maybe failure happened _during_ playback, maybe it failed to start.
+              // depends on what is passed to the function.
+              // errorCode is currently based on W3 specs for HTML5 playback failures.
+              // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+            }
+          });
         }
         this.selected_buttons = [];
       } else {
         console.log("Do not match");
 
-        this.play_wrong();
+        this.play_wrong({
+          onplay: function() {
+            console.log("Yay, playing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
 
         for (var i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
@@ -531,7 +651,17 @@ class Main extends Component {
             " => Match"
         );
 
-        this.play_correct();
+        this.play_correct({
+          onplay: function() {
+            console.log("Yay, playing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
 
         for (var i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
@@ -542,13 +672,33 @@ class Main extends Component {
         if (this.finished_words >= this.total_words) {
           this.openModalHandler();
 
-          this.play_win();
+          this.play_win({
+            onplay: function() {
+              console.log("Yay, playing");
+            },
+            onerror: function(errorCode, description) {
+              // maybe failure happened _during_ playback, maybe it failed to start.
+              // depends on what is passed to the function.
+              // errorCode is currently based on W3 specs for HTML5 playback failures.
+              // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+            }
+          });
         }
         this.selected_buttons = [];
       } else {
         console.log("Do not match");
 
-        this.play_wrong();
+        this.play_wrong({
+          onplay: function() {
+            console.log("Yay, playing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
 
         for (var i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
@@ -606,7 +756,17 @@ class Main extends Component {
             " => Match"
         );
 
-        this.play_correct();
+        this.play_correct({
+          onplay: function() {
+            console.log("Yay, playing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
 
         for (var i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
@@ -617,13 +777,33 @@ class Main extends Component {
         if (this.finished_words >= this.total_words) {
           this.openModalHandler();
 
-          this.play_win();
+          this.play_win({
+            onplay: function() {
+              console.log("Yay, playing");
+            },
+            onerror: function(errorCode, description) {
+              // maybe failure happened _during_ playback, maybe it failed to start.
+              // depends on what is passed to the function.
+              // errorCode is currently based on W3 specs for HTML5 playback failures.
+              // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+            }
+          });
         }
         this.selected_buttons = [];
       } else {
         console.log("Do not match");
 
-        this.play_wrong();
+        this.play_wrong({
+          onplay: function() {
+            console.log("Yay, playing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
 
         for (var i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
@@ -681,7 +861,17 @@ class Main extends Component {
             " => Match"
         );
 
-        this.play_correct();
+        this.play_correct({
+          onplay: function() {
+            console.log("Yay, playing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
 
         for (var i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
@@ -692,13 +882,33 @@ class Main extends Component {
         if (this.finished_words >= this.total_words) {
           this.openModalHandler();
 
-          this.play_win();
+          this.play_win({
+            onplay: function() {
+              console.log("Yay, playing");
+            },
+            onerror: function(errorCode, description) {
+              // maybe failure happened _during_ playback, maybe it failed to start.
+              // depends on what is passed to the function.
+              // errorCode is currently based on W3 specs for HTML5 playback failures.
+              // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+            }
+          });
         }
         this.selected_buttons = [];
       } else {
         console.log("Do not match");
 
-        this.play_wrong();
+        this.play_wrong({
+          onplay: function() {
+            console.log("Yay, playing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
 
         for (var i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
@@ -756,7 +966,17 @@ class Main extends Component {
             " => Match"
         );
 
-        this.play_correct();
+        this.play_correct({
+          onplay: function() {
+            console.log("Yay, playing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
 
         for (var i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
@@ -767,13 +987,33 @@ class Main extends Component {
         if (this.finished_words >= this.total_words) {
           this.openModalHandler();
 
-          this.play_win();
+          this.play_win({
+            onplay: function() {
+              console.log("Yay, playing");
+            },
+            onerror: function(errorCode, description) {
+              // maybe failure happened _during_ playback, maybe it failed to start.
+              // depends on what is passed to the function.
+              // errorCode is currently based on W3 specs for HTML5 playback failures.
+              // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+            }
+          });
         }
         this.selected_buttons = [];
       } else {
         console.log("Do not match");
 
-        this.play_wrong();
+        this.play_wrong({
+          onplay: function() {
+            console.log("Yay, playing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
 
         for (var i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
@@ -831,7 +1071,17 @@ class Main extends Component {
             " => Match"
         );
 
-        this.play_correct();
+        this.play_correct({
+          onplay: function() {
+            console.log("Yay, playing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
 
         for (var i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
@@ -842,13 +1092,33 @@ class Main extends Component {
         if (this.finished_words >= this.total_words) {
           this.openModalHandler();
 
-          this.play_win();
+          this.play_win({
+            onplay: function() {
+              console.log("Yay, playing");
+            },
+            onerror: function(errorCode, description) {
+              // maybe failure happened _during_ playback, maybe it failed to start.
+              // depends on what is passed to the function.
+              // errorCode is currently based on W3 specs for HTML5 playback failures.
+              // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+            }
+          });
         }
         this.selected_buttons = [];
       } else {
         console.log("Do not match");
 
-        this.play_wrong();
+        this.play_wrong({
+          onplay: function() {
+            console.log("Yay, playing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
 
         for (var i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
@@ -906,7 +1176,17 @@ class Main extends Component {
             " => Match"
         );
 
-        this.play_correct();
+        this.play_correct({
+          onplay: function() {
+            console.log("Yay, playing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
 
         for (var i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
@@ -917,13 +1197,33 @@ class Main extends Component {
         if (this.finished_words >= this.total_words) {
           this.openModalHandler();
 
-          this.play_win();
+          this.play_win({
+            onplay: function() {
+              console.log("Yay, playing");
+            },
+            onerror: function(errorCode, description) {
+              // maybe failure happened _during_ playback, maybe it failed to start.
+              // depends on what is passed to the function.
+              // errorCode is currently based on W3 specs for HTML5 playback failures.
+              // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+            }
+          });
         }
         this.selected_buttons = [];
       } else {
         console.log("Do not match");
 
-        this.play_wrong();
+        this.play_wrong({
+          onplay: function() {
+            console.log("Yay, playing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
 
         for (var i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
@@ -981,7 +1281,17 @@ class Main extends Component {
             " => Match"
         );
 
-        this.play_correct();
+        this.play_correct({
+          onplay: function() {
+            console.log("Yay, playing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
 
         for (var i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
@@ -992,13 +1302,33 @@ class Main extends Component {
         if (this.finished_words >= this.total_words) {
           this.openModalHandler();
 
-          this.play_win();
+          this.play_win({
+            onplay: function() {
+              console.log("Yay, playing");
+            },
+            onerror: function(errorCode, description) {
+              // maybe failure happened _during_ playback, maybe it failed to start.
+              // depends on what is passed to the function.
+              // errorCode is currently based on W3 specs for HTML5 playback failures.
+              // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+            }
+          });
         }
         this.selected_buttons = [];
       } else {
         console.log("Do not match");
 
-        this.play_wrong();
+        this.play_wrong({
+          onplay: function() {
+            console.log("Yay, playing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
 
         for (var i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
@@ -1056,7 +1386,17 @@ class Main extends Component {
             " => Match"
         );
 
-        this.play_correct();
+        this.play_correct({
+          onplay: function() {
+            console.log("Yay, playing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
 
         for (var i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
@@ -1067,13 +1407,33 @@ class Main extends Component {
         if (this.finished_words >= this.total_words) {
           this.openModalHandler();
 
-          this.play_win();
+          this.play_win({
+            onplay: function() {
+              console.log("Yay, playing");
+            },
+            onerror: function(errorCode, description) {
+              // maybe failure happened _during_ playback, maybe it failed to start.
+              // depends on what is passed to the function.
+              // errorCode is currently based on W3 specs for HTML5 playback failures.
+              // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+            }
+          });
         }
         this.selected_buttons = [];
       } else {
         console.log("Do not match");
 
-        this.play_wrong();
+        this.play_wrong({
+          onplay: function() {
+            console.log("Yay, playing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
 
         for (var i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
