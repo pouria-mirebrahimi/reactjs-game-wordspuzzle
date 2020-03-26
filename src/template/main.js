@@ -24,9 +24,6 @@ class Main extends Component {
 
     isShowing: false,
 
-    play: false,
-    pause: true,
-
     _0_clicked: false,
     _1_clicked: false,
     _2_clicked: false,
@@ -109,11 +106,6 @@ class Main extends Component {
 
   constructor() {
     super();
-
-    this.url_correct = "../sounds/correct.mp3";
-    this.audio_correct = new Audio(this.url_correct);
-
-    this.audio_correct.play();
 
     this.WORDS = {
       WORD1_1: "غوک",
