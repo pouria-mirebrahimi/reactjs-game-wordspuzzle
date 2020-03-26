@@ -1580,101 +1580,101 @@ class Main extends Component {
             <div class="persian-vazir h4">چشم‌انداز</div>
           </span> */}
 
-          <div class="row">
-            <div class="col-lg-2 col-6 my-3">
+          <div class="row mt-3">
+            <div class="col-lg-2 col-6 my-1">
               <span
                 class={this.btn_0_active}
                 onClick={this._0_clicked.bind(this)}
               >
-                <div class="persian-vazir h4">{this.rnd_words[0]}</div>
+                <div class="persian-vazir h5 pt-1">{this.rnd_words[0]}</div>
               </span>
             </div>
-            <div class="col-lg-2 col-6 my-3">
+            <div class="col-lg-2 col-6 my-1">
               <span
                 class={this.btn_1_active}
                 onClick={this._1_clicked.bind(this)}
               >
-                <div class="persian-vazir h4">{this.rnd_words[1]}</div>
+                <div class="persian-vazir h5 pt-1">{this.rnd_words[1]}</div>
               </span>
             </div>
-            <div class="col-lg-2 col-6 my-3">
+            <div class="col-lg-2 col-6 my-1">
               <span
                 class={this.btn_2_active}
                 onClick={this._2_clicked.bind(this)}
               >
-                <div class="persian-vazir h4">{this.rnd_words[2]}</div>
+                <div class="persian-vazir h5 pt-1">{this.rnd_words[2]}</div>
               </span>
             </div>
-            <div class="col-lg-2 col-6 my-3">
+            <div class="col-lg-2 col-6 my-1">
               <span
                 class={this.btn_3_active}
                 onClick={this._3_clicked.bind(this)}
               >
-                <div class="persian-vazir h4">{this.rnd_words[3]}</div>
+                <div class="persian-vazir h5 pt-1">{this.rnd_words[3]}</div>
               </span>
             </div>
-            <div class="col-lg-2 col-6 my-3">
+            <div class="col-lg-2 col-6 my-1">
               <span
                 class={this.btn_4_active}
                 onClick={this._4_clicked.bind(this)}
               >
-                <div class="persian-vazir h4">{this.rnd_words[4]}</div>
+                <div class="persian-vazir h5 pt-1">{this.rnd_words[4]}</div>
               </span>
             </div>
-            <div class="col-lg-2 col-6 my-3">
+            <div class="col-lg-2 col-6 my-1">
               <span
                 class={this.btn_5_active}
                 onClick={this._5_clicked.bind(this)}
               >
-                <div class="persian-vazir h4">{this.rnd_words[5]}</div>
+                <div class="persian-vazir h5 pt-1">{this.rnd_words[5]}</div>
               </span>
             </div>
-            <div class="col-lg-2 col-6 my-3">
+            <div class="col-lg-2 col-6 my-1">
               <span
                 class={this.btn_6_active}
                 onClick={this._6_clicked.bind(this)}
               >
-                <div class="persian-vazir h4">{this.rnd_words[6]}</div>
+                <div class="persian-vazir h5 pt-1">{this.rnd_words[6]}</div>
               </span>
             </div>
-            <div class="col-lg-2 col-6 my-3">
+            <div class="col-lg-2 col-6 my-1">
               <span
                 class={this.btn_7_active}
                 onClick={this._7_clicked.bind(this)}
               >
-                <div class="persian-vazir h4">{this.rnd_words[7]}</div>
+                <div class="persian-vazir h5 pt-1">{this.rnd_words[7]}</div>
               </span>
             </div>
-            <div class="col-lg-2 col-6 my-3">
+            <div class="col-lg-2 col-6 my-1">
               <span
                 class={this.btn_8_active}
                 onClick={this._8_clicked.bind(this)}
               >
-                <div class="persian-vazir h4">{this.rnd_words[8]}</div>
+                <div class="persian-vazir h5 pt-1">{this.rnd_words[8]}</div>
               </span>
             </div>
-            <div class="col-lg-2 col-6 my-3">
+            <div class="col-lg-2 col-6 my-1">
               <span
                 class={this.btn_9_active}
                 onClick={this._9_clicked.bind(this)}
               >
-                <div class="persian-vazir h4">{this.rnd_words[9]}</div>
+                <div class="persian-vazir h5 pt-1">{this.rnd_words[9]}</div>
               </span>
             </div>
-            <div class="col-lg-2 col-6 my-3">
+            <div class="col-lg-2 col-6 my-1">
               <span
                 class={this.btn_10_active}
                 onClick={this._10_clicked.bind(this)}
               >
-                <div class="persian-vazir h4">{this.rnd_words[10]}</div>
+                <div class="persian-vazir h5 pt-1">{this.rnd_words[10]}</div>
               </span>
             </div>
-            <div class="col-lg-2 col-6 my-3">
+            <div class="col-lg-2 col-6 my-1">
               <span
                 class={this.btn_11_active}
                 onClick={this._11_clicked.bind(this)}
               >
-                <div class="persian-vazir h4">{this.rnd_words[11]}</div>
+                <div class="persian-vazir h5 pt-1">{this.rnd_words[11]}</div>
               </span>
             </div>
           </div>
