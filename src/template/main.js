@@ -1098,17 +1098,47 @@ class Main extends Component {
 
   play_correct = () => {
     const audioEl = document.getElementsByClassName("audio-correct")[0];
-    audioEl.play();
+    audioEl.play({
+      onplay: function() {
+        console.log("Yay, playing");
+      },
+      onerror: function(errorCode, description) {
+        // maybe failure happened _during_ playback, maybe it failed to start.
+        // depends on what is passed to the function.
+        // errorCode is currently based on W3 specs for HTML5 playback failures.
+        // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+      }
+    });
   };
 
   play_wrong = () => {
     const audioEl = document.getElementsByClassName("audio-wrong")[0];
-    audioEl.play();
+    audioEl.play({
+      onplay: function() {
+        console.log("Yay, playing");
+      },
+      onerror: function(errorCode, description) {
+        // maybe failure happened _during_ playback, maybe it failed to start.
+        // depends on what is passed to the function.
+        // errorCode is currently based on W3 specs for HTML5 playback failures.
+        // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+      }
+    });
   };
 
   play_win = () => {
     const audioEl = document.getElementsByClassName("audio-win")[0];
-    audioEl.play();
+    audioEl.play({
+      onplay: function() {
+        console.log("Yay, playing");
+      },
+      onerror: function(errorCode, description) {
+        // maybe failure happened _during_ playback, maybe it failed to start.
+        // depends on what is passed to the function.
+        // errorCode is currently based on W3 specs for HTML5 playback failures.
+        // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+      }
+    });
   };
 
   Example = () => {
