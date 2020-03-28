@@ -212,6 +212,47 @@ class Main extends Component {
       WORD47_2: "بیشتر شدن"
     };
 
+    this.load_data();
+  }
+
+  load_data() {
+    this.setState({
+      isShowing: false
+    });
+
+    this.setState({
+      _0_clicked: false,
+      _1_clicked: false,
+      _2_clicked: false,
+      _3_clicked: false,
+      _4_clicked: false,
+      _5_clicked: false,
+      _6_clicked: false,
+      _7_clicked: false,
+      _8_clicked: false,
+      _9_clicked: false,
+      _10_clicked: false,
+      _11_clicked: false
+    });
+
+    this.btn_0_active = "btn btn-primary d-flex";
+    this.btn_1_active = "btn btn-primary d-flex";
+    this.btn_2_active = "btn btn-primary d-flex";
+    this.btn_3_active = "btn btn-primary d-flex";
+    this.btn_4_active = "btn btn-primary d-flex";
+    this.btn_5_active = "btn btn-primary d-flex";
+    this.btn_6_active = "btn btn-primary d-flex";
+    this.btn_7_active = "btn btn-primary d-flex";
+    this.btn_8_active = "btn btn-primary d-flex";
+    this.btn_9_active = "btn btn-primary d-flex";
+    this.btn_10_active = "btn btn-primary d-flex";
+    this.btn_11_active = "btn btn-primary d-flex";
+
+    this.selected_words = [];
+    this.selected_buttons = [];
+    this.finished_words = 0;
+    this.total_words = 6;
+
     var rnd_array = [];
     rnd_array.push(this.getRandomInt(94));
     for (let i in range.range(0, 1000)) {
@@ -285,8 +326,6 @@ class Main extends Component {
     for (let k in range.range(0, 12)) {
       console.log(this.rnd_words[k]);
     }
-
-    // this.selected_words.push("A stuff");
   }
 
   refreshPage() {
@@ -304,7 +343,7 @@ class Main extends Component {
       isShowing: false
     });
 
-    this.refreshPage();
+    this.load_data();
   };
 
   homeActive() {
@@ -312,7 +351,7 @@ class Main extends Component {
     this.setState({ stuff_clicked: false });
     this.setState({ contact_clicked: false });
 
-    this.refreshPage();
+    this.load_data();
   }
 
   stuffActive() {
