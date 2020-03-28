@@ -104,46 +104,185 @@ class Main extends Component {
     return Math.floor(Math.random() * Math.floor(max));
   }
 
+  isEven(num) {
+    if (num % 2 === 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   constructor() {
     super();
 
     this.WORDS = {
-      WORD1_1: "غوک",
-      WORD1_2: "قورباغه",
-      WORD2_1: "منظره",
-      WORD2_2: "چشم‌انداز",
-      WORD3_1: "ارمغان",
-      WORD3_2: "هدیه",
-      WORD4_1: "سطر",
-      WORD4_2: "خط",
-      WORD5_1: "مکتب",
-      WORD5_2: "مدرسه",
-      WORD6_1: "گرداگرد",
-      WORD6_2: "اطراف"
+      WORD01_1: "غوک",
+      WORD01_2: "قورباغه",
+      WORD02_1: "منظره",
+      WORD02_2: "چشم‌انداز",
+      WORD03_1: "ارمغان",
+      WORD03_2: "هدیه",
+      WORD04_1: "سطر",
+      WORD04_2: "خط",
+      WORD05_1: "مکتب",
+      WORD05_2: "مدرسه",
+      WORD06_1: "گرداگرد",
+      WORD06_2: "اطراف",
+      WORD07_1: "دمی",
+      WORD07_2: "لحظه‌ای",
+      WORD08_1: "بیاب",
+      WORD08_2: "پیدا کن",
+      WORD09_1: "یک چند",
+      WORD09_2: "گاهی",
+      WORD10_1: "بُوَد",
+      WORD10_2: "باشد",
+      WORD11_1: "جهان‌افروز",
+      WORD11_2: "عالم‌تاب",
+      WORD12_1: "گلگون",
+      WORD12_2: "رنگارنگ",
+      WORD13_1: "قشر",
+      WORD13_2: "پوسته",
+      WORD14_1: "نگار",
+      WORD14_2: "تصویر زیبا",
+      WORD15_1: "چیره‌دست",
+      WORD15_2: "ماهر",
+      WORD16_1: "معرفت",
+      WORD16_2: "شناخت",
+      WORD17_1: "انبوه",
+      WORD17_2: "بسیار فراوان",
+      WORD18_1: "مسئولیت",
+      WORD18_2: "وظیفه",
+      WORD19_1: "لطیف",
+      WORD19_2: "ملایم",
+      WORD20_1: "جامه",
+      WORD20_2: "لباس",
+      WORD21_1: "حیرت",
+      WORD21_2: "شگفتی",
+      WORD22_1: "بازرگان",
+      WORD22_2: "تاجر",
+      WORD23_1: "دلنشین",
+      WORD23_2: "جذاب",
+      WORD24_1: "پی‌در‌پی",
+      WORD24_2: "پیوسته",
+      WORD25_1: "پیشین",
+      WORD25_2: "گذشته",
+      WORD26_1: "کوچ",
+      WORD26_2: "مهاجرت",
+      WORD27_1: "حاکم",
+      WORD27_2: "فرمانروا",
+      WORD28_1: "معذرت",
+      WORD28_2: "عذرخواهی",
+      WORD29_1: "خشمگین",
+      WORD29_2: "عصبانی",
+      WORD30_1: "اندیشیدن",
+      WORD30_2: "فکر کردن",
+      WORD31_1: "آفرین",
+      WORD31_2: "درود",
+      WORD32_1: "حَدس",
+      WORD32_2: "گُمان",
+      WORD33_1: "امیر",
+      WORD33_2: "پادشاه",
+      WORD34_1: "حکیم",
+      WORD34_2: "دانشمند",
+      WORD35_1: "فیلسوف",
+      WORD35_2: "فلسفه‌دان",
+      WORD36_1: "شادمان",
+      WORD36_2: "خوشحال",
+      WORD37_1: "قصد",
+      WORD37_2: "اراده",
+      WORD38_1: "چاره",
+      WORD38_2: "راه‌حل",
+      WORD39_1: "حاضر",
+      WORD39_2: "موجود",
+      WORD40_1: "آماده",
+      WORD40_2: "در دسترس",
+      WORD41_1: "توفان",
+      WORD41_2: "تندباد",
+      WORD42_1: "دانش",
+      WORD42_2: "علم",
+      WORD43_1: "بلا",
+      WORD43_2: "سختی",
+      WORD44_1: "نیک‌نامی",
+      WORD44_2: "خوش‌نامی",
+      WORD45_1: "تعلیم",
+      WORD45_2: "آموزش",
+      WORD46_1: "شهرت",
+      WORD46_2: "نام‌آوری",
+      WORD47_1: "افزودن",
+      WORD47_2: "بیشتر شدن"
     };
 
     var rnd_array = [];
-    rnd_array.push(this.getRandomInt(12));
-    for (var i in range.range(0, 100)) {
-      var new_random = this.getRandomInt(12);
+    rnd_array.push(this.getRandomInt(94));
+    for (let i in range.range(0, 1000)) {
+      var new_random = this.getRandomInt(94);
+      if (this.isEven(new_random)) {
+        if (rnd_array.indexOf(new_random + 1) !== -1) {
+          continue;
+        }
+      } else {
+        if (rnd_array.indexOf(new_random - 1) !== -1) {
+          continue;
+        }
+      }
       if (rnd_array.indexOf(new_random) !== -1) {
         continue;
       } else {
         rnd_array.push(new_random);
-        if (rnd_array.size === 12) {
+        if (rnd_array.length >= 6) {
           break;
         }
       }
     }
 
+    var rnd_tiles = [];
+    for (let i in range.range(0, 6)) {
+      if (this.isEven(rnd_array[i])) {
+        rnd_tiles.push(rnd_array[i]);
+        rnd_tiles.push(rnd_array[i] + 1);
+      } else {
+        rnd_tiles.push(rnd_array[i] - 1);
+        rnd_tiles.push(rnd_array[i]);
+      }
+    }
+
+    console.log("Tiles:");
+    for (let i in range.range(rnd_tiles.length)) {
+      console.log(rnd_tiles[i]);
+    }
+
+    rnd_array = [];
+    rnd_array.push(this.getRandomInt(12));
+    for (let i in range.range(0, 100)) {
+      new_random = this.getRandomInt(12);
+      if (rnd_array.indexOf(new_random) !== -1) {
+        continue;
+      } else {
+        rnd_array.push(new_random);
+        if (rnd_array.length >= 12) {
+          break;
+        }
+      }
+    }
+
+    console.log("Arrays:");
+    for (let i in range.range(rnd_array.length)) {
+      console.log(rnd_array[i]);
+    }
+
     this.rnd_words = [];
-    for (var j in range.range(0, 12)) {
-      this.rnd_words.push(_.get(_.values(this.WORDS), rnd_array[j]));
+    for (let j in range.range(0, 12)) {
+      this.rnd_words.push(_.get(_.values(this.WORDS), rnd_tiles[rnd_array[j]]));
       // console.log(_.get(_.values(WORDS), rnd_array[j]));
     }
 
+    console.log("Words:");
+    for (let i in range.range(this.rnd_words.length)) {
+      console.log(this.rnd_words[i]);
+    }
+
     console.log("This is an report:");
-    for (var k in range.range(0, 12)) {
+    for (let k in range.range(0, 12)) {
       console.log(this.rnd_words[k]);
     }
 
@@ -207,7 +346,7 @@ class Main extends Component {
         _.invert(this.WORDS)[this.selected_words[0]] ===
         _.invert(this.WORDS)[this.selected_words[1]]
       ) {
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-primary d-flex";
         }
@@ -215,11 +354,11 @@ class Main extends Component {
         this.selected_buttons = [];
         this.selected_words = [];
       } else if (
-        _.invert(this.WORDS)[this.selected_words[0]].substr(0, 5) ===
-        _.invert(this.WORDS)[this.selected_words[1]].substr(0, 5)
+        _.invert(this.WORDS)[this.selected_words[0]].substr(0, 6) ===
+        _.invert(this.WORDS)[this.selected_words[1]].substr(0, 6)
       ) {
         console.log(
-          _.invert(this.WORDS)[this.selected_words[0]].substr(0, 5) +
+          _.invert(this.WORDS)[this.selected_words[0]].substr(0, 6) +
             " => Match"
         );
 
@@ -235,7 +374,7 @@ class Main extends Component {
           }
         });
 
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-success d-flex";
         }
@@ -260,6 +399,18 @@ class Main extends Component {
       } else {
         console.log("Do not match");
 
+        this.pause_wrong({
+          onpause: function() {
+            console.log("Yay, pausing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
+
         this.play_wrong({
           onplay: function() {
             console.log("Yay, playing");
@@ -272,13 +423,13 @@ class Main extends Component {
           }
         });
 
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-danger d-flex";
         }
 
         setTimeout(() => {
-          for (var i in range.range(2)) {
+          for (let i in range.range(2)) {
             this["btn_" + this.selected_buttons[i] + "_active"] =
               "btn btn-primary d-flex";
 
@@ -312,7 +463,7 @@ class Main extends Component {
         _.invert(this.WORDS)[this.selected_words[0]] ===
         _.invert(this.WORDS)[this.selected_words[1]]
       ) {
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-primary d-flex";
         }
@@ -320,11 +471,11 @@ class Main extends Component {
         this.selected_buttons = [];
         this.selected_words = [];
       } else if (
-        _.invert(this.WORDS)[this.selected_words[0]].substr(0, 5) ===
-        _.invert(this.WORDS)[this.selected_words[1]].substr(0, 5)
+        _.invert(this.WORDS)[this.selected_words[0]].substr(0, 6) ===
+        _.invert(this.WORDS)[this.selected_words[1]].substr(0, 6)
       ) {
         console.log(
-          _.invert(this.WORDS)[this.selected_words[0]].substr(0, 5) +
+          _.invert(this.WORDS)[this.selected_words[0]].substr(0, 6) +
             " => Match"
         );
 
@@ -340,7 +491,7 @@ class Main extends Component {
           }
         });
 
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-success d-flex";
         }
@@ -365,6 +516,18 @@ class Main extends Component {
       } else {
         console.log("Do not match");
 
+        this.pause_wrong({
+          onpause: function() {
+            console.log("Yay, pausing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
+
         this.play_wrong({
           onplay: function() {
             console.log("Yay, playing");
@@ -377,13 +540,13 @@ class Main extends Component {
           }
         });
 
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-danger d-flex";
         }
 
         setTimeout(() => {
-          for (var i in range.range(2)) {
+          for (let i in range.range(2)) {
             this["btn_" + this.selected_buttons[i] + "_active"] =
               "btn btn-primary d-flex";
 
@@ -417,7 +580,7 @@ class Main extends Component {
         _.invert(this.WORDS)[this.selected_words[0]] ===
         _.invert(this.WORDS)[this.selected_words[1]]
       ) {
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-primary d-flex";
         }
@@ -425,11 +588,11 @@ class Main extends Component {
         this.selected_buttons = [];
         this.selected_words = [];
       } else if (
-        _.invert(this.WORDS)[this.selected_words[0]].substr(0, 5) ===
-        _.invert(this.WORDS)[this.selected_words[1]].substr(0, 5)
+        _.invert(this.WORDS)[this.selected_words[0]].substr(0, 6) ===
+        _.invert(this.WORDS)[this.selected_words[1]].substr(0, 6)
       ) {
         console.log(
-          _.invert(this.WORDS)[this.selected_words[0]].substr(0, 5) +
+          _.invert(this.WORDS)[this.selected_words[0]].substr(0, 6) +
             " => Match"
         );
 
@@ -445,7 +608,7 @@ class Main extends Component {
           }
         });
 
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-success d-flex";
         }
@@ -470,6 +633,18 @@ class Main extends Component {
       } else {
         console.log("Do not match");
 
+        this.pause_wrong({
+          onpause: function() {
+            console.log("Yay, pausing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
+
         this.play_wrong({
           onplay: function() {
             console.log("Yay, playing");
@@ -482,13 +657,13 @@ class Main extends Component {
           }
         });
 
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-danger d-flex";
         }
 
         setTimeout(() => {
-          for (var i in range.range(2)) {
+          for (let i in range.range(2)) {
             this["btn_" + this.selected_buttons[i] + "_active"] =
               "btn btn-primary d-flex";
 
@@ -522,7 +697,7 @@ class Main extends Component {
         _.invert(this.WORDS)[this.selected_words[0]] ===
         _.invert(this.WORDS)[this.selected_words[1]]
       ) {
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-primary d-flex";
         }
@@ -530,11 +705,11 @@ class Main extends Component {
         this.selected_buttons = [];
         this.selected_words = [];
       } else if (
-        _.invert(this.WORDS)[this.selected_words[0]].substr(0, 5) ===
-        _.invert(this.WORDS)[this.selected_words[1]].substr(0, 5)
+        _.invert(this.WORDS)[this.selected_words[0]].substr(0, 6) ===
+        _.invert(this.WORDS)[this.selected_words[1]].substr(0, 6)
       ) {
         console.log(
-          _.invert(this.WORDS)[this.selected_words[0]].substr(0, 5) +
+          _.invert(this.WORDS)[this.selected_words[0]].substr(0, 6) +
             " => Match"
         );
 
@@ -550,7 +725,7 @@ class Main extends Component {
           }
         });
 
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-success d-flex";
         }
@@ -575,6 +750,18 @@ class Main extends Component {
       } else {
         console.log("Do not match");
 
+        this.pause_wrong({
+          onpause: function() {
+            console.log("Yay, pausing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
+
         this.play_wrong({
           onplay: function() {
             console.log("Yay, playing");
@@ -587,13 +774,13 @@ class Main extends Component {
           }
         });
 
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-danger d-flex";
         }
 
         setTimeout(() => {
-          for (var i in range.range(2)) {
+          for (let i in range.range(2)) {
             this["btn_" + this.selected_buttons[i] + "_active"] =
               "btn btn-primary d-flex";
 
@@ -627,7 +814,7 @@ class Main extends Component {
         _.invert(this.WORDS)[this.selected_words[0]] ===
         _.invert(this.WORDS)[this.selected_words[1]]
       ) {
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-primary d-flex";
         }
@@ -635,11 +822,11 @@ class Main extends Component {
         this.selected_buttons = [];
         this.selected_words = [];
       } else if (
-        _.invert(this.WORDS)[this.selected_words[0]].substr(0, 5) ===
-        _.invert(this.WORDS)[this.selected_words[1]].substr(0, 5)
+        _.invert(this.WORDS)[this.selected_words[0]].substr(0, 6) ===
+        _.invert(this.WORDS)[this.selected_words[1]].substr(0, 6)
       ) {
         console.log(
-          _.invert(this.WORDS)[this.selected_words[0]].substr(0, 5) +
+          _.invert(this.WORDS)[this.selected_words[0]].substr(0, 6) +
             " => Match"
         );
 
@@ -655,7 +842,7 @@ class Main extends Component {
           }
         });
 
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-success d-flex";
         }
@@ -680,6 +867,18 @@ class Main extends Component {
       } else {
         console.log("Do not match");
 
+        this.pause_wrong({
+          onpause: function() {
+            console.log("Yay, pausing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
+
         this.play_wrong({
           onplay: function() {
             console.log("Yay, playing");
@@ -692,13 +891,13 @@ class Main extends Component {
           }
         });
 
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-danger d-flex";
         }
 
         setTimeout(() => {
-          for (var i in range.range(2)) {
+          for (let i in range.range(2)) {
             this["btn_" + this.selected_buttons[i] + "_active"] =
               "btn btn-primary d-flex";
 
@@ -732,7 +931,7 @@ class Main extends Component {
         _.invert(this.WORDS)[this.selected_words[0]] ===
         _.invert(this.WORDS)[this.selected_words[1]]
       ) {
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-primary d-flex";
         }
@@ -740,11 +939,11 @@ class Main extends Component {
         this.selected_buttons = [];
         this.selected_words = [];
       } else if (
-        _.invert(this.WORDS)[this.selected_words[0]].substr(0, 5) ===
-        _.invert(this.WORDS)[this.selected_words[1]].substr(0, 5)
+        _.invert(this.WORDS)[this.selected_words[0]].substr(0, 6) ===
+        _.invert(this.WORDS)[this.selected_words[1]].substr(0, 6)
       ) {
         console.log(
-          _.invert(this.WORDS)[this.selected_words[0]].substr(0, 5) +
+          _.invert(this.WORDS)[this.selected_words[0]].substr(0, 6) +
             " => Match"
         );
 
@@ -760,7 +959,7 @@ class Main extends Component {
           }
         });
 
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-success d-flex";
         }
@@ -785,6 +984,18 @@ class Main extends Component {
       } else {
         console.log("Do not match");
 
+        this.pause_wrong({
+          onpause: function() {
+            console.log("Yay, pausing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
+
         this.play_wrong({
           onplay: function() {
             console.log("Yay, playing");
@@ -797,13 +1008,13 @@ class Main extends Component {
           }
         });
 
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-danger d-flex";
         }
 
         setTimeout(() => {
-          for (var i in range.range(2)) {
+          for (let i in range.range(2)) {
             this["btn_" + this.selected_buttons[i] + "_active"] =
               "btn btn-primary d-flex";
 
@@ -837,7 +1048,7 @@ class Main extends Component {
         _.invert(this.WORDS)[this.selected_words[0]] ===
         _.invert(this.WORDS)[this.selected_words[1]]
       ) {
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-primary d-flex";
         }
@@ -845,11 +1056,11 @@ class Main extends Component {
         this.selected_buttons = [];
         this.selected_words = [];
       } else if (
-        _.invert(this.WORDS)[this.selected_words[0]].substr(0, 5) ===
-        _.invert(this.WORDS)[this.selected_words[1]].substr(0, 5)
+        _.invert(this.WORDS)[this.selected_words[0]].substr(0, 6) ===
+        _.invert(this.WORDS)[this.selected_words[1]].substr(0, 6)
       ) {
         console.log(
-          _.invert(this.WORDS)[this.selected_words[0]].substr(0, 5) +
+          _.invert(this.WORDS)[this.selected_words[0]].substr(0, 6) +
             " => Match"
         );
 
@@ -865,7 +1076,7 @@ class Main extends Component {
           }
         });
 
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-success d-flex";
         }
@@ -890,6 +1101,18 @@ class Main extends Component {
       } else {
         console.log("Do not match");
 
+        this.pause_wrong({
+          onpause: function() {
+            console.log("Yay, pausing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
+
         this.play_wrong({
           onplay: function() {
             console.log("Yay, playing");
@@ -902,13 +1125,13 @@ class Main extends Component {
           }
         });
 
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-danger d-flex";
         }
 
         setTimeout(() => {
-          for (var i in range.range(2)) {
+          for (let i in range.range(2)) {
             this["btn_" + this.selected_buttons[i] + "_active"] =
               "btn btn-primary d-flex";
 
@@ -942,7 +1165,7 @@ class Main extends Component {
         _.invert(this.WORDS)[this.selected_words[0]] ===
         _.invert(this.WORDS)[this.selected_words[1]]
       ) {
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-primary d-flex";
         }
@@ -950,11 +1173,11 @@ class Main extends Component {
         this.selected_buttons = [];
         this.selected_words = [];
       } else if (
-        _.invert(this.WORDS)[this.selected_words[0]].substr(0, 5) ===
-        _.invert(this.WORDS)[this.selected_words[1]].substr(0, 5)
+        _.invert(this.WORDS)[this.selected_words[0]].substr(0, 6) ===
+        _.invert(this.WORDS)[this.selected_words[1]].substr(0, 6)
       ) {
         console.log(
-          _.invert(this.WORDS)[this.selected_words[0]].substr(0, 5) +
+          _.invert(this.WORDS)[this.selected_words[0]].substr(0, 6) +
             " => Match"
         );
 
@@ -970,7 +1193,7 @@ class Main extends Component {
           }
         });
 
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-success d-flex";
         }
@@ -995,6 +1218,18 @@ class Main extends Component {
       } else {
         console.log("Do not match");
 
+        this.pause_wrong({
+          onpause: function() {
+            console.log("Yay, pausing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
+
         this.play_wrong({
           onplay: function() {
             console.log("Yay, playing");
@@ -1007,13 +1242,13 @@ class Main extends Component {
           }
         });
 
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-danger d-flex";
         }
 
         setTimeout(() => {
-          for (var i in range.range(2)) {
+          for (let i in range.range(2)) {
             this["btn_" + this.selected_buttons[i] + "_active"] =
               "btn btn-primary d-flex";
 
@@ -1047,7 +1282,7 @@ class Main extends Component {
         _.invert(this.WORDS)[this.selected_words[0]] ===
         _.invert(this.WORDS)[this.selected_words[1]]
       ) {
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-primary d-flex";
         }
@@ -1055,11 +1290,11 @@ class Main extends Component {
         this.selected_buttons = [];
         this.selected_words = [];
       } else if (
-        _.invert(this.WORDS)[this.selected_words[0]].substr(0, 5) ===
-        _.invert(this.WORDS)[this.selected_words[1]].substr(0, 5)
+        _.invert(this.WORDS)[this.selected_words[0]].substr(0, 6) ===
+        _.invert(this.WORDS)[this.selected_words[1]].substr(0, 6)
       ) {
         console.log(
-          _.invert(this.WORDS)[this.selected_words[0]].substr(0, 5) +
+          _.invert(this.WORDS)[this.selected_words[0]].substr(0, 6) +
             " => Match"
         );
 
@@ -1075,7 +1310,7 @@ class Main extends Component {
           }
         });
 
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-success d-flex";
         }
@@ -1100,6 +1335,18 @@ class Main extends Component {
       } else {
         console.log("Do not match");
 
+        this.pause_wrong({
+          onpause: function() {
+            console.log("Yay, pausing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
+
         this.play_wrong({
           onplay: function() {
             console.log("Yay, playing");
@@ -1112,13 +1359,13 @@ class Main extends Component {
           }
         });
 
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-danger d-flex";
         }
 
         setTimeout(() => {
-          for (var i in range.range(2)) {
+          for (let i in range.range(2)) {
             this["btn_" + this.selected_buttons[i] + "_active"] =
               "btn btn-primary d-flex";
 
@@ -1152,7 +1399,7 @@ class Main extends Component {
         _.invert(this.WORDS)[this.selected_words[0]] ===
         _.invert(this.WORDS)[this.selected_words[1]]
       ) {
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-primary d-flex";
         }
@@ -1160,11 +1407,11 @@ class Main extends Component {
         this.selected_buttons = [];
         this.selected_words = [];
       } else if (
-        _.invert(this.WORDS)[this.selected_words[0]].substr(0, 5) ===
-        _.invert(this.WORDS)[this.selected_words[1]].substr(0, 5)
+        _.invert(this.WORDS)[this.selected_words[0]].substr(0, 6) ===
+        _.invert(this.WORDS)[this.selected_words[1]].substr(0, 6)
       ) {
         console.log(
-          _.invert(this.WORDS)[this.selected_words[0]].substr(0, 5) +
+          _.invert(this.WORDS)[this.selected_words[0]].substr(0, 6) +
             " => Match"
         );
 
@@ -1180,7 +1427,7 @@ class Main extends Component {
           }
         });
 
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-success d-flex";
         }
@@ -1205,6 +1452,18 @@ class Main extends Component {
       } else {
         console.log("Do not match");
 
+        this.pause_wrong({
+          onpause: function() {
+            console.log("Yay, pausing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
+
         this.play_wrong({
           onplay: function() {
             console.log("Yay, playing");
@@ -1217,13 +1476,13 @@ class Main extends Component {
           }
         });
 
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-danger d-flex";
         }
 
         setTimeout(() => {
-          for (var i in range.range(2)) {
+          for (let i in range.range(2)) {
             this["btn_" + this.selected_buttons[i] + "_active"] =
               "btn btn-primary d-flex";
 
@@ -1257,7 +1516,7 @@ class Main extends Component {
         _.invert(this.WORDS)[this.selected_words[0]] ===
         _.invert(this.WORDS)[this.selected_words[1]]
       ) {
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-primary d-flex";
         }
@@ -1265,11 +1524,11 @@ class Main extends Component {
         this.selected_buttons = [];
         this.selected_words = [];
       } else if (
-        _.invert(this.WORDS)[this.selected_words[0]].substr(0, 5) ===
-        _.invert(this.WORDS)[this.selected_words[1]].substr(0, 5)
+        _.invert(this.WORDS)[this.selected_words[0]].substr(0, 6) ===
+        _.invert(this.WORDS)[this.selected_words[1]].substr(0, 6)
       ) {
         console.log(
-          _.invert(this.WORDS)[this.selected_words[0]].substr(0, 5) +
+          _.invert(this.WORDS)[this.selected_words[0]].substr(0, 6) +
             " => Match"
         );
 
@@ -1285,7 +1544,7 @@ class Main extends Component {
           }
         });
 
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-success d-flex";
         }
@@ -1310,6 +1569,18 @@ class Main extends Component {
       } else {
         console.log("Do not match");
 
+        this.pause_wrong({
+          onpause: function() {
+            console.log("Yay, pausing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
+
         this.play_wrong({
           onplay: function() {
             console.log("Yay, playing");
@@ -1322,13 +1593,13 @@ class Main extends Component {
           }
         });
 
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-danger d-flex";
         }
 
         setTimeout(() => {
-          for (var i in range.range(2)) {
+          for (let i in range.range(2)) {
             this["btn_" + this.selected_buttons[i] + "_active"] =
               "btn btn-primary d-flex";
 
@@ -1362,7 +1633,7 @@ class Main extends Component {
         _.invert(this.WORDS)[this.selected_words[0]] ===
         _.invert(this.WORDS)[this.selected_words[1]]
       ) {
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-primary d-flex";
         }
@@ -1370,11 +1641,11 @@ class Main extends Component {
         this.selected_buttons = [];
         this.selected_words = [];
       } else if (
-        _.invert(this.WORDS)[this.selected_words[0]].substr(0, 5) ===
-        _.invert(this.WORDS)[this.selected_words[1]].substr(0, 5)
+        _.invert(this.WORDS)[this.selected_words[0]].substr(0, 6) ===
+        _.invert(this.WORDS)[this.selected_words[1]].substr(0, 6)
       ) {
         console.log(
-          _.invert(this.WORDS)[this.selected_words[0]].substr(0, 5) +
+          _.invert(this.WORDS)[this.selected_words[0]].substr(0, 6) +
             " => Match"
         );
 
@@ -1390,7 +1661,7 @@ class Main extends Component {
           }
         });
 
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-success d-flex";
         }
@@ -1415,6 +1686,18 @@ class Main extends Component {
       } else {
         console.log("Do not match");
 
+        this.pause_wrong({
+          onpause: function() {
+            console.log("Yay, pausing");
+          },
+          onerror: function(errorCode, description) {
+            // maybe failure happened _during_ playback, maybe it failed to start.
+            // depends on what is passed to the function.
+            // errorCode is currently based on W3 specs for HTML5 playback failures.
+            // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+          }
+        });
+
         this.play_wrong({
           onplay: function() {
             console.log("Yay, playing");
@@ -1427,13 +1710,13 @@ class Main extends Component {
           }
         });
 
-        for (var i in range.range(2)) {
+        for (let i in range.range(2)) {
           this["btn_" + this.selected_buttons[i] + "_active"] =
             "btn btn-danger d-flex";
         }
 
         setTimeout(() => {
-          for (var i in range.range(2)) {
+          for (let i in range.range(2)) {
             this["btn_" + this.selected_buttons[i] + "_active"] =
               "btn btn-primary d-flex";
 
@@ -1468,6 +1751,21 @@ class Main extends Component {
     audioEl.play({
       onplay: function() {
         console.log("Yay, playing");
+      },
+      onerror: function(errorCode, description) {
+        // maybe failure happened _during_ playback, maybe it failed to start.
+        // depends on what is passed to the function.
+        // errorCode is currently based on W3 specs for HTML5 playback failures.
+        // https://html.spec.whatwg.org/multipage/embedded-content.html#error-codes
+      }
+    });
+  };
+
+  pause_wrong = () => {
+    const audioEl = document.getElementsByClassName("audio-wrong")[0];
+    audioEl.pause({
+      onpause: function() {
+        console.log("Yay, pausing");
       },
       onerror: function(errorCode, description) {
         // maybe failure happened _during_ playback, maybe it failed to start.
